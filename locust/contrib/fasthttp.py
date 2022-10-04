@@ -220,7 +220,7 @@ class FastHttpSession:
             "start_time": start_time,
             "url": built_url,  # this is a small deviation from HttpSession, which gets the final (possibly redirected) URL
         }
-		if response.headers.get("X-Runtime") == None:
+        if response.headers.get("X-Runtime") == None:
             server_response_time = 0
         else:
             server_response_time = float(response.headers.get("X-Runtime")) * 1000
